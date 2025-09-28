@@ -1,6 +1,6 @@
-import { View } from "react-native";
+import { StatusBar, View } from "react-native";
 import { useExitApp } from "./hooks/useExitApp";
-import ActionSheetIOSComponent from "./components/ios/ActionSheetIOSComponent";
+import RefreshExample from "./components/RefreshExample";
 
 const App = () => {
   useExitApp();
@@ -10,13 +10,14 @@ const App = () => {
       style={{
         flex: 1,
         backgroundColor: "#f5f5f5",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      <ActionSheetIOSComponent />
+      <StatusBar barStyle="dark-content" backgroundColor="#f00" animated />
+      <RefreshExample />
     </View>
   );
 };
 
 export default App;
-
-// 1:56
